@@ -1,5 +1,12 @@
 language: java
 sudo: false
 script: mvn clean install
+deploy:
+  provider: releases
+  api_key: "FILL IN"
+  file: "FILL IN"
+  skip_cleanup: true
+  on:
+    tags: true
 notifications:
   email: false
