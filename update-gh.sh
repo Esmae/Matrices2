@@ -1,4 +1,4 @@
-if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+if [ "$TRAVIS_COMMIT_MESSAGE" == "Travis build pushed to testingUpload" ]; then
   echo -e "Starting to update testingUpload\n"
 
   cp -R test8 $HOME
@@ -14,7 +14,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   git add -f .
   echo -e "2"
-  git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to testingUpload"
+  git commit -m "Travis build pushed to testingUpload"
   echo -e "3"
   git push -fq https://${TOKEN}@github.com/Esmae/Matrices2.git testingUpload > /dev/null
 
