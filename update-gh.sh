@@ -1,4 +1,4 @@
-if [ "$TRAVIS_COMMIT_MESSAGE" == "Travis build pushed to testingUpload" ]; then
+if [ "$TRAVIS_COMMIT_MESSAGE" != "Travis build pushed to testingUpload" ]; then
   echo -e "Starting to update testingUpload\n"
 
   cp -R test8 $HOME
