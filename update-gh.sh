@@ -8,8 +8,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   git config --global user.name "Travis"
   git clone --quiet --branch=testingUpload https://${TOKEN}@github.com/Esmae/Matrices2.git  testingUpload > /dev/null
 
-  cd testingUpload
-  cp -Rf $HOME/test8
+  cp -Rf $HOME/test8 testingUpload
 
   git add -f .
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to testingUpload"
