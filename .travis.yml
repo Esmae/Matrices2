@@ -5,4 +5,6 @@ script:
 - java -jar target/Matrices-0.0.1-SNAPSHOT.jar -p noRows=3 -e com.testtwo.Matrices.MyBenchmark.testMultIKJ -rf csv -rff test8
 notifications:
   email: false
-after_success: ./update-gh.sh
+after_success: 
+- chmod +x update-gh.sh 
+- ./update-gh.sh
