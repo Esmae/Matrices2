@@ -12,7 +12,7 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
   git add -f .
   git commit -m "Travis build $TRAVIS_BUILD_NUMBER pushed to testingUpload"
-  git push -fq origin testingUpload > /dev/null
+  git push -fq https://${TOKEN}@github.com/Esmae/Matrices2.git testingUpload > /dev/null
 
   echo -e "Success? \n"
 fi
